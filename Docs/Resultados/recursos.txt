@@ -1,0 +1,63 @@
+Goals start incomplete
+Coin quota cannot overflow
+All item types are required
+Goal completion uses every quota
+Key and hazard do not count as relics
+Reset clears all counters
+Motion exists: Locomoção
+Valid animation condition: Jump
+Valid animation condition: Grounded
+Valid animation condition: Jump
+Valid animation condition: Dance1
+Valid animation condition: Headspin Start
+Valid animation condition: GangnamStyle
+Valid animation condition: Dance2
+Valid animation condition: Waving
+Valid animation condition: Chutar
+Motion exists: Salto
+Motion exists: No ar
+Valid animation condition: Grounded
+Motion exists: Dance1
+Valid animation condition: Dance1
+Motion exists: Headspin Start
+Valid animation condition: Headspin Start
+Motion exists: GangnamStyle
+Valid animation condition: GangnamStyle
+Motion exists: Dance2
+Valid animation condition: Dance2
+Motion exists: Waving
+Valid animation condition: Waving
+Motion exists: Chutar
+Valid animation condition: Chutar
+No duplicate animation states
+Scene stage index 0
+UI references 0
+Single audio listener 0
+Terrain has four layers and collision 0
+Gravel path paint is saved 0
+Scene stage index 1
+UI references 1
+Single audio listener 1
+Terrain has four layers and collision 1
+Gravel path paint is saved 1
+Valid player and humanoid Avatar 1
+Player uses corrected animator 1
+Placed items match quotas 1
+Scene stage index 2
+UI references 2
+Single audio listener 2
+Terrain has four layers and collision 2
+Gravel path paint is saved 2
+Valid player and humanoid Avatar 2
+Player uses corrected animator 2
+Both door variants are present
+Key is available in door stage
+Scene stage index 3
+UI references 3
+Single audio listener 3
+Terrain has four layers and collision 3
+Gravel path paint is saved 3
+Valid player and humanoid Avatar 3
+Player uses corrected animator 3
+Placed items match quotas 3
+Menu and three stages are included in build

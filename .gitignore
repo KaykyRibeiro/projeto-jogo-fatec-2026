@@ -37,3 +37,8 @@ sysinfo.txt
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local build logs and verification captures.
+/BuildLogs/
+/QAArtifacts/
+**/__pycache__/

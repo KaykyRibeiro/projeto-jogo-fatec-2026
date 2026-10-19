@@ -75,6 +75,10 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+        [Header("Game controls")]
+        public bool GameplayEnabled = true;
+        [Range(0.2f, 3f)] public float LookSensitivity = 1f;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -167,6 +171,7 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (!GameplayEnabled) return;
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
@@ -177,7 +182,7 @@ namespace StarterAssets
             int animacao = 0;
             if (Keyboard.current != null && Grounded && !_input.jump && _input.move == Vector2.zero)
             {
-                if (Keyboard.current.eKey.isPressed) animacao = 6;
+                if (Keyboard.current.fKey.isPressed) animacao = 6;
                 else if (Keyboard.current.digit1Key.isPressed) animacao = 1;
                 else if (Keyboard.current.digit2Key.isPressed) animacao = 2;
                 else if (Keyboard.current.digit3Key.isPressed) animacao = 3;
@@ -387,7 +392,7 @@ namespace StarterAssets
 
         private void LateUpdate()
         {
-            CameraRotation();
+            if (GameplayEnabled) CameraRotation();
         }
 
         private void AssignAnimationIDs()
@@ -429,8 +434,8 @@ namespace StarterAssets
                 //Don't multiply mouse input by Time.deltaTime;
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
-                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
+                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier * LookSensitivity;
+                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier * LookSensitivity;
             }
 
             // clamp our rotations so our values are limited 360 degrees
@@ -573,9 +578,9 @@ namespace StarterAssets
             }
 
             // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-            if (_verticalVelocity < _terminalVelocity)
+            if (_verticalVelocity > -_terminalVelocity)
             {
-                _verticalVelocity += Gravity * Time.deltaTime;
+                _verticalVelocity = Mathf.Max(_verticalVelocity + Gravity * Time.deltaTime, -_terminalVelocity);
             }
         }
 
