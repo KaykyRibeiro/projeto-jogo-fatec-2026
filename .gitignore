@@ -1,0 +1,39 @@
+# Unity: generated caches and local settings (also covers nested projects).
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+**/[Bb]uild/
+**/[Bb]uilds/
+
+# Visual Studio, Rider, and generated Unity solution files.
+**/.vs/
+**/.idea/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity crash reports and exported packages.
+sysinfo.txt
+*.unitypackage
+
+# Operating system files.
+.DS_Store
+Thumbs.db
+Desktop.ini
